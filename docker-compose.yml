@@ -1,0 +1,17 @@
+services:
+  validator:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: awp-fernando-validator
+    volumes:
+      # We remove the .:/app mount to prevent patching from leaking to host files
+      # and to ensure the patched files from the image build are used.
+      - ../mine-skill:/app/mine-skill
+      - ./wallets.json:/app/wallets.json
+      - ./.env:/app/.env
+    environment:
+      - MINER_ID=miner-1
+    restart: unless-stopped
+    stdin_open: true
+    tty: true

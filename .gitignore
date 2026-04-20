@@ -1,0 +1,22 @@
+# SECRETS (NEVER COMMIT THESE)
+wallets.json
+.env
+*.pem
+
+# Runtime Data
+data/
+wrapper.log
+*.log
+
+# Dependencies
+node_modules/
+.venv/
+__pycache__/
+
+# Docker Logs
+logs/
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
