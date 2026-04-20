@@ -78,7 +78,7 @@ async function main() {
         envContent += `OPENAI_API_BASE=https://api.fireworks.ai/inference/v1\n`;
     }
     if (!envContent.includes('MINE_GATEWAY_MODEL')) {
-        envContent += `MINE_GATEWAY_MODEL=accounts/fireworks/models/llama-v3p1-70b-instruct\n`;
+        envContent += `MINE_GATEWAY_MODEL=accounts/fireworks/models/llama-v3p3-70b-instruct\n`;
     }
 
     fs.writeFileSync(ENV_FILE, envContent.trim() + '\n');
